@@ -36,6 +36,7 @@ public class PageController {
 		
 		model.addAttribute("select", select);
 		model.addAttribute("codes", TestUrlApplication.codes);
+		model.addAttribute("droits", TestUrlApplication.droits);
 	
 		return "page";
 	}

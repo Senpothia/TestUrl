@@ -75,6 +75,10 @@
 							<tr>
 								<th style="text-align: center" scope="col">Codes testés</th>
 
+								<th style="text-align: center" scope="col">Autorisations</th>
+
+						
+
 
 							</tr>
 						</thead>
@@ -84,7 +88,11 @@
 								<td style="text-align: center" th:text="${code}" />
 
 
-
+								<td style="text-align: center"><span
+									th:if="${droits.get(iStat.index)}"><img class="img-fluid" src="/vert.png" alt=""
+					th:src="@{/vert.png}" /></span> <span
+									th:unless="${droits.get(iStat.index)}"><img class="img-fluid" src="/rouge.png" alt=""
+					th:src="@{/rouge.png}" /></span></td>
 
 
 
@@ -104,13 +112,10 @@
 				<div class="col">
 					<div class="d-flex justify-content-end">
 						<a class="btn btn-primary mb-1 mr-1 bouton2"
-						
-							href="/testUrl/page/effacer" role="button">Effacer</a> 
-							
-							<a class="btn btn-primary mb-1 mr-1 bouton2"
-						
-							href="/testUrl/page/" role="button">Raffraichir</a> 
-							
+							href="/testUrl/page/effacer" role="button">Effacer</a> <a
+							class="btn btn-primary mb-1 mr-1 bouton2" href="/testUrl/page/"
+							role="button">Raffraichir</a>
+
 
 					</div>
 				</div>

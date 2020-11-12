@@ -13,6 +13,8 @@ public class TestUrlApplication {
 	public static Integer auths = 1;
 	public static boolean select = true;
 	public static List<String> codes = new ArrayList<String>();
+	public static List<Boolean> droits = new ArrayList<Boolean>();
+	
 		
 
 	public static Integer getAuths() {
@@ -35,6 +37,30 @@ public class TestUrlApplication {
 
 	public static void setSelect(boolean select) {
 		TestUrlApplication.select = select;
+	}
+
+	
+
+	public static List<String> getCodes() {
+		return codes;
+	}
+
+
+
+	public static void setCodes(List<String> codes) {
+		TestUrlApplication.codes = codes;
+	}
+
+
+
+	public static List<Boolean> getDroits() {
+		return droits;
+	}
+
+
+
+	public static void setDroits(List<Boolean> droits) {
+		TestUrlApplication.droits = droits;
 	}
 
 
