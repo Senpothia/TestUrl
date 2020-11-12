@@ -20,7 +20,7 @@ public class Api {
 	public Reponse getReponse(@RequestParam(name = "id", required = false) String id) {
 
 		boolean error = false;
-		String authorisation = "none";
+		String authorisation = "0";
 		String identifier = "invalid";
 
 		if (id == null) {
@@ -34,7 +34,7 @@ public class Api {
 				error = true;
 			}
 
-			if (id.length() != 7) {
+			if (id.length() < 1 || id.length() > 16) {
 
 				error = true;
 				id = "invalid";
@@ -43,8 +43,8 @@ public class Api {
 
 		try {
 			String hexNumber = id;
-			int decimal = Integer.parseInt(hexNumber, 16);
-			// authorisation = "1";
+			long decimal = Long.parseLong(hexNumber, 16);
+			
 
 			if (TestUrlApplication.select) {
 
